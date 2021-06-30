@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>冰磚圖鑑大搜查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/q8.js"></script>
+</head>
+<body>
+    <div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+    <div id="tips" onclick="turnon_alert('tips')"><div></div></div>
+    <h1 id="title">壓力給幾分</h1>
+    <a href="index.html" id="goleft"></a>
+    <div class="content">
+        <div class="question_bg">
+            <div id="question_text">
+                你的壓力有多大呢？<br>
+                寫下你的分數，讓我們來給你一些放鬆的小技巧吧！<br>
+                <br>
+                此為限時攤位，請於擺攤期間(11/18、11/20 11:30-13:00)至第二餐廳進行闖關
+            </div>
+        </div>
+        <input type="text" id="answer" placeholder="你的分數(阿拉伯數字)" oninput="value=value.replace(/[^\d]/g,'')">
+        <button id="confirm" onclick="finish()">確定</button>
+    </div>
+    <div id="alert_shadow">
+        <div id="alert_bg">
+            <div class="box"><div id="alert_text"></div></div>
+            <button id="alert_confirm" onclick="turnoff_alert()"><div></div></button>
+        </div>
+    </div>
+    <a href="http://counsel.sa.nctu.edu.tw" id="website" target="new_window">交大諮商中心</a>
+</body>
+</html>

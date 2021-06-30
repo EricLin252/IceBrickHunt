@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>冰磚圖鑑大搜查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/q5.js"></script>
+</head>
+<body>
+    <div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+    <div id="tips" onclick="turnon_alert('tips')"><div></div></div>
+    <h1 id="title">小確幸の店</h1>
+    <a href="index.html" id="goleft"></a>
+    <div class="content">
+        <div class="question_bg">
+            <div id="question_text">
+                幸福雖然微小，但可以很確實，
+                多去確認就能強化你的快樂感。
+                請觀察周邊環境，
+                寫下能帶給你小確幸的任何人事物。
+            </div>
+        </div>
+        <textarea id="answer" placeholder="你的答案..."></textarea>
+        <button id="confirm" onclick="finish()">完成</button>
+    </div>
+    <div id="alert_shadow">
+        <div id="alert_bg">
+            <div class="box"><div id="alert_text"></div></div>
+            <button id="alert_confirm" onclick="turnoff_alert()"><div></div></button>
+        </div>
+    </div>
+    <a href="http://counsel.sa.nctu.edu.tw" id="website" target="new_window">交大諮商中心</a>
+</body>
+</html>

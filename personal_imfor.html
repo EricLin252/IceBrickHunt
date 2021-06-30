@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>冰磚圖鑑大搜查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/personal_imfor.css">
+	<link rel="stylesheet" href="css/loading.css">
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+	<script src="js/database.js"></script>
+    <script src="js/personal_imfor.js"></script>
+</head>
+<body>
+    <div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+    <h1 id="title">第一顆冰磚</h1>
+    <button id="goleft" onclick="add_imformation()"></button>
+    <div class="content">
+        <div class="text_bg">
+            <p id="type"><span class="text_subject">身分:</span><span class="text_content">
+                <span id="type_text"></span>
+                <span id="identity" onclick="">
+                    <span id="type_change">交大學生</span>
+                    <span class="dropdown">
+                        <span id="listbtn"></span>
+                        <span id="list">
+                            <button class="type_select" onclick="changeType_student()">交大學生</button>
+                            <button class="type_select" onclick="changeType_teacher()">交大教職員</button>
+                            <button class="type_select" onclick="changeType_others()">校外人士</button>
+                        </span>
+                    </span>
+                </span>
+            </span></p>
+            <p id="account"><span class="text_subject"></span><span class="text_content">
+                <span id="account_text"></span>
+                <input type="text" id="account_change" placeholder="輸入學號" oninput="value=value.replace(/[\u4E00-\u9FA5]/g, '')">
+            </span></p>
+            <p id="email"><span class="text_subject">Email:</span><span class="text_content"></span></p>
+        </div>
+        <button class="confirm" id="logout" onclick="logout()">登出</button>
+        <input type="text" class="mid_row" id="change_email" placeholder="更改Email" oninput="value=value.replace(/[\u4E00-\u9FA5]/g,'')">
+        <div class="mid_row">
+            <input type="password" id="change_password" placeholder="更改密碼" oninput="value=value.replace(/[\u4E00-\u9FA5]/g,'')">
+            <button class="eye" onclick="ch_pwd_type()"></button>
+        </div>
+        <button class="confirm" id="change" onclick="change_imformation()">確認更改</button>
+    </div>
+    <a href="http://counsel.sa.nctu.edu.tw" id="website" target="new_window">交大諮商中心</a>
+</body>
+</html>

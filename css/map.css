@@ -1,0 +1,30 @@
+.map_background {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/p3.png"), url("../img/p4.png"), url("../img/map.png"), url("../img/map_bg.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: auto 15%, auto 15%, 90% auto, 100% 100%;
+    background-position: 20% 85%, 70% 85%, center 30%, left top;
+    pointer-events: none;
+}
+/*
+.map_content {
+    width: 90%;
+    margin: auto;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    z-index: 2;
+}
+
+.map_content::before {
+    display: inline-block;
+    content: "";
+    width: 0%;
+    padding-top: 100%;
+}
+*/

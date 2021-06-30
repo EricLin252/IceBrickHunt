@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>冰磚圖鑑大搜查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/q6.js"></script>
+</head>
+<body>
+    <div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+    <div id="tips" onclick="turnon_alert('tips')"><div></div></div>
+    <h1 id="title">心靈充電站</h1>
+    <a href="index.html" id="goleft"></a>
+    <div class="content">
+        <div class="question_bg">
+            <div id="question_text">
+                請找一個舒適的位置坐下，戴上耳機聆聽<a href="https://www.youtube.com/watch?v=9XzRNDLlSSQ" target="view_window">【錄音檔】</a>，
+                在這寧靜的三分鐘，練習放鬆、與自己的身體同在。<br>
+                *聽完錄音檔，並回答最後一句話是什麼，即可完成闖關喔！
+            </div>
+        </div>
+        <button class="selection" id="num1" onclick="select(1)">練習活在當下</button>
+        <button class="selection" id="num2" onclick="select(2)">祝福你在練習中持續的獲益</button>
+        <button class="selection" id="num3" onclick="select(3)">正念是覺察當下的每件事情</button>
+        <button class="selection" id="num4" onclick="select(4)">睜開眼睛，準備面對這一天</button>
+    </div>
+    <div id="alert_shadow">
+        <div id="alert_bg">
+            <div class="box"><div id="alert_text"></div></div>
+            <button id="alert_confirm" onclick="turnoff_alert()"><div></div></button>
+        </div>
+    </div>
+    <a href="http://counsel.sa.nctu.edu.tw" id="website" target="new_window">交大諮商中心</a>
+</body>
+</html>

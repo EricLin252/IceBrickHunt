@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>冰磚圖鑑大搜查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/q9.js"></script>
+</head>
+<body>
+    <div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+    <div id="tips" onclick="turnon_alert('tips')"><div></div></div>
+    <h1 id="title">雪球大作戰</h1>
+    <a href="index.html" id="goleft"></a>
+    <div class="content">
+        <div class="question_bg">
+            <div id="question_text">
+                動動你的身體，試試你的精準度，選擇你剛剛玩的活動項目，即可闖關成功！<br>
+                <br>
+                此為限時攤位，請於擺攤期間(11/26、11/28 11:30-13:00)至女二餐廳前廣場進行闖關
+            </div>
+        </div>
+        <button class="selection" id="num1" onclick="select(1)">跳繩</button>
+        <button class="selection" id="num2" onclick="select(2)">籃球</button>
+        <button class="selection" id="num3" onclick="select(3)">九宮格</button>
+        <button class="selection" id="num4" onclick="select(4)">瑜珈</button>
+    </div>
+    <div id="alert_shadow">
+        <div id="alert_bg">
+            <div class="box"><div id="alert_text"></div></div>
+            <button id="alert_confirm" onclick="turnoff_alert()"><div></div></button>
+        </div>
+    </div>
+    <a href="http://counsel.sa.nctu.edu.tw" id="website" target="new_window">交大諮商中心</a>
+</body>
+</html>

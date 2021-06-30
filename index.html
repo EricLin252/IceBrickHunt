@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>冰磚圖鑑大搜查</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/dictionary.css">
+	<link rel="stylesheet" href="css/map.css">
+	<link rel="stylesheet" href="css/game_imfor.css">
+	<link rel="stylesheet" href="css/loading.css">
+	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+	<script src="js/database.js"></script>
+	<script src="js/dictionary.js"></script>
+</head>
+<body>
+	<div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+	<div id="big_box" class="box">
+		<div id="map" class="content">
+			<button id="goright" onclick="move()"></button>
+			<h1 class="title">地圖</h1>
+			<div class="map_background"></div>
+		</div>
+		<div id="dictionary" class="content">
+			<h1 class="title">冰磚圖鑑</h1>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a class="block" href="#">
+				<div class="brick">?</div>
+				<div class="discription">???</div>
+			</a>
+			<a href="https://forms.gle/STCeVHUom4ZPKh3q9" id="question_sheet" target="new_window"><div>闖關完成抽獎請按我</div></a>
+			<button id="map_btn" onclick="move(' moveRight')">
+				<div class="map_btn_bg"></div>
+				<p class="map_btn_text">地圖</p>
+			</button>
+			<button id="game_imfor_btn" onclick="move(' moveLeft')">
+				<div class="game_imfor_btn_bg"></div>
+				<p class="game_imfor_btn_text">關於遊戲</p>
+			</button>
+		</div>
+		<div id="game_imfor" class="content">
+			<button id="goleft" onclick="move()"></button>
+			<h1 class="title">關於遊戲</h1>
+			<div class="text">
+				本活動總共「9」個尋寶點等你挖寶，只要找到「7」個冰磚就可以獲得抽獎機會喔～<br>
+				＊遊戲說明：<br>
+				1.查看闖關地圖，走到地圖上相對應的地點，透過謎語找到闖關QRcode。<br>
+				2.掃描QRcode，針對題目指引完成闖關條件後，即可獲得一個冰磚。<br>
+				3.搜集滿7個冰磚會跳出「闖關完成抽獎請按我」字樣，點擊後填完基本資料與問卷，抽獎結果將在12/4公告喔！<br>
+				＊抽獎好禮：<br>
+				1.威秀電影票2張<br>
+				2.萊爾富禮券500元<br>
+				3.企鵝搖搖擴香木(含精油)<br>
+				4.企鵝破冰桌遊<br>
+				<br>
+				<span>
+				遊戲製作：<br>
+				工作人員：朱柏叡 林冠宇 袁欣如 陳庭美 許靜怡 彭思蓉 鄭宇婷<br>
+				美編設計：人間失腦(hgj)<br>
+				</span>
+			</div>
+			<a id="error_report" href="https://forms.gle/GfJwSNex9QjcDsWU7" target="new_window">登入或創帳發生問題嗎？</a>
+			<div class="game_imfor_background"></div>
+		</div>
+	</div>
+	<a href="http://counsel.sa.nctu.edu.tw" id="website" target="new_window">交大諮商中心</a>
+</body>
+</html>

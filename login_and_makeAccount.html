@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>冰磚圖鑑大搜查</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/login_and_makeAccount.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/login_and_makeAccount.js"></script>
+</head>
+<body>
+    <div id="loading"><div>Loading...<br>請直放手機遊玩</div></div>
+    <div class="head"></div>
+    <div class="content">
+        <div id="logo"></div>
+        <h1 class="mid_row" id="title">登入</h1>
+        <div id="discription">
+            哈囉～歡迎你參加「冰磚圖鑑大搜查—搜集七彩冰磚」尋寶活動，當你登入成功就獲得一顆冰磚囉！<br>
+            本活動總共「9」個尋寶點等你挖寶，只要找到「7」個冰磚就可以獲得抽獎機會喔～<br>
+            ＊遊戲說明：<br>
+            1.查看闖關地圖，走到地圖上相對應的地點，透過謎語找到闖關QRcode。<br>
+            2.掃描QRcode，針對題目指引完成闖關條件後，即可獲得一個冰磚。<br>
+            3.搜集滿7個冰磚會跳出「闖關完成抽獎請按我」字樣，點擊後填完基本資料與問卷，抽獎結果將在12/4公告喔！<br>
+            <br>
+            ＊抽獎好禮：<br>
+            1.威秀電影票2張<br>
+            2.萊爾富禮券500元<br>
+            3.企鵝搖搖擴香木(含精油)<br>
+            4.企鵝破冰桌遊
+        </div>
+        <div class="mid_row" id="identity" onclick="">
+            <div class="mid_row" id="type">交大學生</div>
+            <div class="dropdown">
+                <div id="listbtn"></div>
+                <div id="list">
+                    <button class="type_select" onclick="changeType_student()">交大學生</button>
+                    <button class="type_select" onclick="changeType_teacher()">交大教職員</button>
+                    <button class="type_select" onclick="changeType_others()">校外人士</button>
+                </div>
+            </div>
+        </div>
+        <input class="mid_row" type="text" id="account" placeholder="學號" oninput="value=value.replace(/[\u4E00-\u9FA5]/g,'')">
+        <input class="mid_row" type="text" id="email" placeholder="Email" oninput="value=value.replace(/[\u4E00-\u9FA5]/g,'')">
+        <div class="mid_row">
+            <input type="password" id="password" placeholder="密碼" oninput="value=value.replace(/[\u4E00-\u9FA5]/g,'')">
+            <button class="eye" onclick="ch_pwd_type()"></button>
+        </div>
+        <button id="confirm" onclick="confirm()">確認</button>
+        <button id="change_state" onclick="change_state()">第一次玩請點這邊</button>
+        <button id="forgot_pwd" onclick="forgot_pwd()">忘記密碼</button> 或 <a id="error_report" href="https://forms.gle/GfJwSNex9QjcDsWU7" target="new_window">登入發生問題</a>
+    </div>
+    <a href="https://counsel.sa.nctu.edu.tw" id="website" target="new_window"><div></div><span>交大諮商中心</span></a>
+</body>
+</html>
